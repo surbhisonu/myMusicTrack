@@ -60,7 +60,7 @@ ngApp.controller('PageOneController', ['CONFIG', '$scope', '$location', '$window
 /********************************************************** GETTING ALL TRACKS ***************************************************************/
   $http({
     method : "GET",
-    url : "http://104.197.128.152:8000/v1/tracks"
+    url : "https://104.197.128.152:8000/v1/tracks"
   }).then(function mySucces(response) {
     // console.log(response);
     console.log('GET ALL TRACKS',response.data);
@@ -77,7 +77,7 @@ ngApp.controller('PageOneController', ['CONFIG', '$scope', '$location', '$window
 /**********************************************************SEARCH TRACK WITH TITLE**********************************************************/
   $http({
     method : "GET",
-    url : "http://104.197.128.152:8000/v1/tracks?title=tack1"                     // Hymn%20for%20the%20weekend NOT FOUND , THEREFORE USED title= track1
+    url : "https://104.197.128.152:8000/v1/tracks?title=tack1"                     // Hymn%20for%20the%20weekend NOT FOUND , THEREFORE USED title= track1
   }).then(function mySucces(response) {                                           //HYMM FOR WEEKEND NOT FOUND IN FIRST PAGE
     console.log('SEARCH WITH TRACK',response);
 
@@ -94,7 +94,7 @@ ngApp.controller('PageOneController', ['CONFIG', '$scope', '$location', '$window
 /****************************************SEARCH TRACKS WITH TITLE************************************/
 $http({
   method : "GET",
-  url : "http://104.197.128.152:8000/v1/tracks?title=Hymn%20for%20the%20weekend"                //HYMM FOR WEEKEND NOT FOUND IN FIRST PAGE
+  url : "https://104.197.128.152:8000/v1/tracks?title=Hymn%20for%20the%20weekend"                //HYMM FOR WEEKEND NOT FOUND IN FIRST PAGE
 }).then(function mySucces(response) {
   console.log('SEARCH',response);
 
@@ -109,7 +109,7 @@ $http({
 /*****************************************EDIT TRACK RECORD**************************************/
 $http({
   method : "POST",
-  url : "http://104.197.128.152:8000/v1/tracks/48",                             // ID 1 IS NOT FOUND SO USED ID 48
+  url : "https://104.197.128.152:8000/v1/tracks/48",                             // ID 1 IS NOT FOUND SO USED ID 48
   data : {
     "id": 1,
     "title": "animals",
