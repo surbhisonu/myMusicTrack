@@ -1,1 +1,1 @@
-web: gulpfile.js
+web: js/ng/main.js
