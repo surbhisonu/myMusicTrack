@@ -6,7 +6,7 @@ ngApp.controller('PageTwoController', ['CONFIG', '$scope', '$location', '$window
 /************************************************** LIST ALL GENRES *******************************************************************/
 $http({
   method : "GET",
-  url : "https://104.197.128.152:8000/v1/genres"
+  url : "http://104.197.128.152:8000/v1/genres"
 }).then(function mySucces(response) {
   // console.log(response);
   console.log('ALL GENRES',response.data);
@@ -23,7 +23,7 @@ $http({
 /************************************************** GET SINGLE GENRE RECORD ********************************************************/
 $http({
   method : "GET",
-  url : "https://104.197.128.152:8000/v1/genres/12"        // 12 is used because 11 is not found
+  url : "http://104.197.128.152:8000/v1/genres/12"        // 12 is used because 11 is not found
 }).then(function mySucces(response) {
   // console.log(response);
   console.log('SINGLE GENRE',response.data);
@@ -36,7 +36,7 @@ $http({
 /************************************************* EDIT GENRE RECORD ***************************************************************/
 $http({
   method : "POST",
-  url : "https://104.197.128.152:8000/v1/genres/12",       // 12 is used because 11 is not found
+  url : "http://104.197.128.152:8000/v1/genres/12",       // 12 is used because 11 is not found
   data : {
     "id": 11,
     "name": "bollywood"
@@ -54,7 +54,7 @@ $http({
     // alert('on click')
     $http({
       method : "POST",
-      url : "https://104.197.128.152:8000/v1/genres",
+      url : "http://104.197.128.152:8000/v1/genres",
       data : {
       "name": "bollywood"
     }
