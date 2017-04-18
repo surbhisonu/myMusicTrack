@@ -1,1 +1,1 @@
-web: js/ng/main.js
+web: ./js/ng/**/*.js
