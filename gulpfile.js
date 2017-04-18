@@ -31,6 +31,14 @@ gulp.task('serve', function() {
     }));
 });
 
+gulp.task('serveprod', function() {
+  connect.server({
+    root: ['js/ng/main.js'],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
+
 gulp.task('serve-livereload', function() {
   gulp.src('.')
     .pipe(server({
